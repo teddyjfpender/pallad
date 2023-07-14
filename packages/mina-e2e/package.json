@@ -1,0 +1,33 @@
+{
+  "name": "@palladxyz/mina-e2e",
+  "version": "0.0.1",
+  "description": "End-to-end testing package for Pallad SDK functionality",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test:unit": "vitest run",
+    "cleanup": "rimraf node_modules dist .turbo"
+  },
+  "dependencies": {
+    "@palladxyz/mina-core": "*",
+    "@palladxyz/mina-graphql": "*",
+    "@palladxyz/util": "*",
+    "buffer": "^6.0.3",
+    "dockerode": "^3.3.5"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^3.3.19",
+    "@types/mocha": "^10.0.1",
+    "@types/secp256k1": "^4.0.3",
+    "happy-dom": "^9.20.3",
+    "msw": "^1.2.2"
+  }
+}
